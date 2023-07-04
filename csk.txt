@@ -1,0 +1,15 @@
+21 MS_Dhoni 1 60 0 4
+22 Ruturaj_Gaikwad 1 40 0 3
+23 Robin_Uthappa 1 30 0 1 
+24 Ambati_Rayudu 1 21 0 1
+25 Devon_Conway 1 47 0 2
+26 Subhranshu_Senapati 1 23 0 1	
+27 Hari_Nishaanth 1 14 0 1
+28 N_Jagadeesan 0 0 1 0
+29 Deepak_Chahar 0 0 3 0
+30 KM_Asif 0 0 1 0
+31 Tushar_Deshpande 0 0 0 0 
+32 Maheesh_Theekshana 0 0 2 1
+33 Simranjeet_Singh 0 0 1 0
+34 Matheesha_Pathirana 0 0 1 0
+35 Mukesh_Choudhary 0 0 2 1

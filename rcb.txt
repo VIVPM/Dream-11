@@ -1,0 +1,30 @@
+1 Virat_Kohli 1 45 0 2
+2 Glenn_Maxwell 1 50 0 2
+3 Wanindu_Hasaranga 1 14 2 1 
+4 Harshal_Patel 0 23 2 0
+5 Josh_Hazlewood 0 0 3 0 
+6 Faf_Du_Plessis 1 88 0	3
+7 Mohammed_Siraj 0 0 1 0
+8 Dinesh_Karthik 1 12 0 3	
+9 Anuj_Rawat 1 0 0 2
+10 Shahbaz_Ahamad 0 0 2 1  
+11 Sherfane_Rutherford 0 0 0 1  
+12 Mahipal_Lomror 0 11 0 0
+13 Finn_llen 0 0 0 0
+14 Jason_Behrendorff 0 0 0 0
+15 Suyash_Prabhudessai  0 0 0 0
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

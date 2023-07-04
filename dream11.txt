@@ -1,0 +1,560 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class SportsLeague
+{
+public:
+    string name;
+    int type;
+
+    SportsLeague(string n,int t):name(n),type(t) {}
+
+    virtual void display() = 0;
+};
+
+class player
+{
+public:
+    string name;
+    bool captain,vice_captain,selected=0;
+    int type,p_no,points;
+    int runs = 0;
+    float strike_rate = 120;
+    int six = 1,four = 2;
+    int Balls_faced = 0;
+    int wickets = 2;
+    int maiden_over = 1;
+    int overs_bowled = 4;
+    float Economy = 0;
+    int total_runs = 28;
+    int catches = 2;
+    int run_out = 3;
+
+    player()
+    {
+
+    }
+
+    virtual void Calculatepoints()
+    {
+
+    }
+};
+
+class Batsman:public player
+{
+public:
+    void Calculatepoint()
+    {
+        if(runs >= 30 && runs < 50)
+        {
+            points = points + 4 + 2 * six + four + runs;
+        }
+
+        else if(runs >= 50 && runs < 100)
+        {
+            points = points + 4 + 8 + 2 * six + four + runs;
+        }
+
+        else if(runs >= 100 && strike_rate >= 100)
+        {
+            points = points + 4 + 8 + 16 + 2 * six + four + runs + 6;
+        }
+
+        else if(runs >= 30  && runs < 50 && strike_rate >= 100)
+        {
+            points = points + 4 + 2 * six + four + runs + 6;
+        }
+
+        else if(runs >= 50 && runs < 100 && strike_rate >= 100)
+        {
+            points = points + 4 + 8 + 2 * six + four + runs + 6;
+        }
+
+        else if(runs == 0)
+        {
+            points = points - 2;
+        }
+
+        else
+        {
+            points = points + runs + four + 2 * six + 6;
+        }
+    }
+};
+
+class Bowler:public player
+{
+public:
+    void Calculatepoint()
+    {
+        Economy = total_runs/overs_bowled;
+        if(wickets >= 1)
+        {
+            points = points + (wickets * 25);
+        }
+
+        else if(maiden_over > 0)
+        {
+            points = points + 12 * maiden_over;
+        }
+
+        else if(Economy <= 6)
+        {
+            points = points + 6;
+        }
+
+        else if(Economy > 6 && Economy <= 8)
+        {
+            points = points + 4;
+        }
+
+        else if(Economy > 8)
+        {
+            points = points - 2;
+        }
+
+        else if(wickets >= 1 && maiden_over > 0)
+        {
+            points = points + wickets * 25 + 12 * maiden_over;
+        }
+
+        else if(wickets >= 1 && Economy <= 6)
+        {
+            points = points + wickets * 25 + 6;
+        }
+
+        else if(wickets >= 1 && Economy > 6 && Economy <= 8)
+        {
+            points = points + wickets * 25 + 4;
+        }
+
+        else if(wickets >= 1 && Economy > 8)
+        {
+            points = points + wickets * 25 - 2;
+        }
+
+        else if(maiden_over > 0 && Economy <= 6)
+        {
+            points = points + maiden_over * 12 + 6;
+        }
+
+        else if(maiden_over > 0 && Economy > 6 && Economy <= 8)
+        {
+            points = points + maiden_over * 12 + 4;
+        }
+
+        else
+        {
+            points = points + maiden_over * 12 - 2;
+        }
+
+    }
+};
+
+class Fielder:public player
+{
+public:
+    void Calculatepoints()
+    {
+        if(catches <= 3)
+        {
+            points = (catches * 8);
+        }
+
+        else if(catches >= 3)
+        {
+            points = (catches * 8) + 4;
+        }
+
+        else if(run_out >= 1)
+        {
+            points = (run_out * 12);
+        }
+
+        else if(run_out >= 1 && catches <= 3)
+        {
+            points = (run_out * 12) + (catches * 8);
+        }
+
+        else
+        {
+            points = (run_out * 12) + (catches * 8) + 4;
+        }
+    }
+};
+
+class team
+{
+public:
+    Batsman bat[10];
+    Bowler ball[10];
+    string name;
+    int id;
+    static int count1;
+    player p[15];
+    team(string name)
+    {
+        this->name=name;
+        id = ++count1;
+    }
+
+    team() {}
+
+    void read_players(int k)
+    {
+        ifstream ifs;
+        if(k==1)
+        {
+            ifs.open("rcb.txt");
+        }
+        else
+        {
+            ifs.open("csk.txt");
+        }
+        string n;
+        int type_in_file,pno,r,w;
+        for(int i=0; i<15; i++)
+        {
+
+            ifs>>pno;
+            ifs>>n;
+            ifs>>type_in_file;
+            ifs>>r;
+            ifs>>w;
+            p[i].name=n;
+            p[i].type=type_in_file;
+            p[i].p_no=pno;
+            p[i].runs=r;
+            p[i].wickets=w;
+        }
+
+        ifs.close();
+    }
+
+    void show(team t1,team t2)
+    {
+        int i;
+        cout<<"\n\nBATSMEN ARE\n\n";
+        for(i=0; i<15; i++)
+        {
+            if(t1.p[i].type==1)
+            {
+                cout<<t1.p[i].p_no<<" "<<t1.p[i].name<<endl;
+            }
+            if(t2.p[i].type==1)
+            {
+                cout<<t2.p[i].p_no<<" "<<t2.p[i].name<<endl;
+            }
+
+        }
+
+        cout<<"\n\nBOWLERS ARE\n";
+        for(i=0; i<11; i++)
+        {
+            if(t1.p[i].type==0)
+            {
+                cout<<t1.p[i].p_no<<" "<<t1.p[i].name<<endl;
+            }
+
+            if(t2.p[i].type==0)
+            {
+                cout<<t2.p[i].p_no<<" "<<t2.p[i].name<<endl;
+            }
+
+        }
+    }
+};
+
+class IPL:public SportsLeague
+{
+public:
+    team teams[2];
+    IPL(string n,int t,team tt[2]):SportsLeague(n,t)
+    {
+        for(int i = 0; i < 2; i++)
+        {
+            teams[i] = tt[i];
+        }
+    }
+
+    int getteam(int i)
+    {
+        int flag = 0;
+        for(int i = 0; i < 2; i++)
+        {
+            if(teams[i].id == i)
+            {
+                return teams[i].id;
+            }
+        }
+
+        return -1;
+    }
+
+    void display()
+    {
+        cout << "Name = " << name << endl;
+        cout << "Type = " << type << endl;
+    }
+
+};
+
+class FootBallLeague:public SportsLeague
+{
+public:
+    FootBallLeague(string n,int t):SportsLeague(n,t) {}
+
+    void display()
+    {
+        cout << "Name = " << name << endl;
+        cout << "Type = " << type << endl;
+    }
+};
+
+class BasketBallLeague:public SportsLeague
+{
+public:
+    BasketBallLeague(string n,int t):SportsLeague(n,t) {}
+
+    void display()
+    {
+        cout << "Name = " << name << endl;
+        cout << "Type = " << type << endl;
+    }
+};
+
+class Exception
+{
+public:
+    string msg;
+    int id;
+
+    Exception(string m,int i):msg(m),id(i) {}
+
+    void show()
+    {
+        cout << "Message displayed : " <<  msg << endl;
+        cout << "Message id : " << id << endl;
+    }
+};
+
+class user
+{
+public:
+    string name;
+    team user_team;
+    int bat_count=0,ball_count=0;
+    user(string name)
+    {
+        this->name=name;
+    }
+
+    int s=0;
+    team select_batsmen(team t1,team t2,int isbat)
+    {
+        int rep;
+        if(isbat)
+        {
+            cout<<"ENTER PLAYER NUMBER TO SELECT TO YOUR BATTERS LIST.\nYOU HAVE TO SELECT EXACTLY 6 BATTERS"<<endl;
+            rep=6;
+        }
+        else
+        {
+            cout<<"ENTER PLAYER NUMBER TO SELECT TO YOUR BOWLERS LIST.\nYOU HAVE TO SELECT EXACTLY 5 BOWLERS"<<endl;
+            rep=5;
+        }
+
+
+        int pno;
+        for(int j=0; j<rep; j++)
+        {
+            cin>>pno;
+            for(int i=0; i<11; i++)
+            {
+                if(t1.p[i].p_no==pno)
+                {
+                    if(t1.p[i].selected==1)
+                    {
+                        cout<<"PLAYER ALREADY SELECTED. PLEASE SELECT DIFFERENT PLAYER.\n";
+                        s--;
+                        j--;
+                    }
+                    else
+                    {
+                        user_team.p[s]=t1.p[i];
+                        if(isbat)
+                        {
+                            user_team.bat[bat_count].name=t1.p[i].name;
+                            user_team.bat[bat_count].runs=t1.p[i].runs;
+                            user_team.bat[bat_count].wickets=t1.p[i].wickets;
+                            bat_count++;
+                        }
+
+                        else
+                        {
+                            user_team.ball[ball_count].name=t1.p[i].name;
+                            user_team.ball[ball_count].runs=t1.p[i].runs;
+                            user_team.ball[ball_count].wickets=t1.p[i].wickets;
+                            ball_count++;
+                        }
+                        t1.p[i].selected=1;
+
+                    }
+
+                }
+                else if(t2.p[i].p_no==pno)
+                {
+                    if(t2.p[i].selected==1)
+                    {
+                        cout<<"PLAYER ALREADY SELECTED. PLEASE SELECT DIFFERENT PLAYER.\n";
+                        s--;
+                        j--;
+                    }
+                    else
+                    {
+                        user_team.p[s]=t2.p[i];
+                        if(isbat)
+                        {
+                            user_team.bat[bat_count].name=t2.p[i].name;
+                            user_team.bat[bat_count].runs=t2.p[i].runs;
+                            user_team.bat[bat_count].wickets=t2.p[i].wickets;
+                            bat_count++;
+                        }
+
+                        else
+                        {
+                            user_team.ball[ball_count].name=t2.p[i].name;
+                            user_team.ball[ball_count].runs=t2.p[i].runs;
+                            user_team.ball[ball_count].wickets=t2.p[i].wickets;
+                            ball_count++;
+                        }
+                        t1.p[i].selected=1;
+                        t2.p[i].selected=1;
+                    }
+                }
+            }
+            s++;
+        }
+
+        return user_team;
+    }
+
+    void show()
+    {
+        cout<<"USER SELECTED TEAM IS \n"<<endl;
+        for(int i=0; i<11; i++)
+        {
+            cout<<user_team.p[i].name<<endl;
+        }
+    }
+
+};
+
+int team::count1 = 0;
+
+int main()
+{
+    SportsLeague *s[2] = {new FootBallLeague("UEFA",1),new BasketBallLeague("NBA",2)};
+    int selection;
+    try
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            cout << "Select your league" << endl;
+            cin >> selection;
+            if(s[i]->type == selection)
+            {
+                s[i]->display();
+                throw Exception("Football league games are not currently available",12);
+            }
+
+            else if(s[i]->type == selection)
+            {
+                s[i]->display();
+                throw Exception("Basketball league games are not currently available",13);
+            }
+
+            else
+            {
+                cout << "THE CONTEST IS AVAILABLE AND MATCH BETWEEN RCB AND CSK IS CURRENTLY AVAILABLE" << endl;
+                cout << "Choose players" << endl;
+            }
+        }
+    }
+
+    catch(Exception &e)
+    {
+        e.show();
+    }
+    team t2("CSK");
+    team t1("RCB");
+    user u1("KRISH");
+    user u2("Ravi");
+    t1.read_players(1);
+    t2.read_players(0);
+    team dummy;
+    dummy.show(t1,t2);
+    team user_team1;
+    team user_team2;
+    user_team1.name = "Gladiators";
+    user_team2.name = "Supernovas";
+    user_team1=u1.select_batsmen(t1,t2,1);
+    user_team1=u1.select_batsmen(t1,t2,0);
+    u1.show();
+    cout << endl << endl << endl;
+    cout<<"ENTER TEAM OF USER 2\n";
+    user_team2=u2.select_batsmen(t1,t2,1);
+    user_team2=u2.select_batsmen(t1,t2,0);
+    cout<<"TEAM OF USER 2 IS\n";
+    u2.show();
+    team teams[2] = {user_team1,user_team2};
+    IPL *i = new IPL("ipl",0,teams);
+    int teamsno = i->getteam(1);
+    if(teamsno == -1)
+    {
+        cout << "Selected team id is wrong" << endl;
+    }
+
+    else
+    {
+        for(int i = 0; i < 2; i++)
+        {
+            if(teams[i].id == teamsno)
+            {
+                for(int j = 0; j < 11; j++)
+                {
+                    cout << teams[i].p[j].name << endl;
+                }
+            }
+        }
+    }
+
+    int total1=0,total2=0;
+    for(int i=0; i<5; i++)
+    {
+        user_team1.bat[i].Calculatepoint();
+        total1=total1+user_team1.bat[i].points;
+        user_team2.bat[i].Calculatepoint();
+        total2=total2+user_team2.bat[i].points;
+    }
+
+    cout<<"POINTS SCORED BY USER 1 IS "<<total1<<endl<<"POINTS SCORED BY USER 2 IS "<<total2<<endl;
+
+    if(total1>total2)
+    {
+        cout<<"USER 1 HAS WON THE GAME...CONGRATULATIONS..."<<endl;
+    }
+
+    else if(total2>total1)
+    {
+        cout<<"USER 2 HAS WON THE GAME...CONGRATULATIONS..."<<endl;
+    }
+
+    else
+    {
+        cout<<"USER 1 AND USER 2 HAVE WON THE GAME...CONGRATULATIONS..."<<endl;
+    }
+
+    return 0;
+}
