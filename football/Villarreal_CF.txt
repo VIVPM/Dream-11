@@ -1,0 +1,15 @@
+1 Reina 1 1 3 1
+2 Torres 1 2 1 1 
+3 Albiol 1 1 1 0 
+4 Pedraza 1 0 0 0 
+5 Foyth 1 0 0 1
+6 Parejo 1 0 0 2
+7 Capoue 2 0 0 3
+8 Pino 2 2 1 1
+9 Celso 2 2 2 1
+10 Moreno 2 1 1 1
+11 Baena 1 1 1 2
+12 Jackson 1 2 2 3
+13 Chukwueze 2 2 2 1
+14 Moreno 2 2 2 1
+15 Trigueros 2 1 1 1

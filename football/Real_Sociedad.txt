@@ -1,0 +1,15 @@
+16 Remiro 1 2 2 1
+17 Munoz 1 1 1 2
+18 Normand 1 1 0 0 
+19 Zubeldia 1 0 0 0 
+20 Traore 1 2 2 1
+21 Zubimendi 1 0 0 2
+22 Merino 1 0 2 1
+23 Silva 2 0 0 0
+24 Kubo 2 1 1 1
+25 Mendez 2 1 2 1
+26 Oyarzabal 2 1 2 2
+27 Sadiq 2 0 0 1
+28 Barrenetxea 1 0 0 2
+29 Guevara 1 0 0 3
+30 Pacheco 1 0 0 1

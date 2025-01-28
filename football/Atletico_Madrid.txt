@@ -1,0 +1,15 @@
+31 Oblak 2 1 1 1
+32 Savic 1 1 1 2
+33 Gimenez 1 1 2 2
+34 Hermoso 1 2 2 2
+35 Azpilicueta 2 2 1 2 
+36 Koke 1 1 2 2
+37 Paul 2 2 1 2
+38 Niguez 1 1 2 2
+39 Llorente 1 2 2 2
+40 Griezmann 2 1 1 2
+41 Depay 1 1 1 2
+42 Morata 2 2 2 2
+43 Carrasco 2 1 1 1
+44 Barrios 2 0 0 0
+45 Witsel 1 0 0 1

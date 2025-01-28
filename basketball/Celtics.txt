@@ -1,0 +1,15 @@
+31 Tatum 1 1 1 1
+32 Brown 1 2 2 1
+33 Smart 1 2 0 0 
+34 Horford 2 2 2 0
+35 Williams 2 1 1 1 
+36 Schroder 2 2 1 1
+37 Richardson 1 0 2 2 
+38 Pritchard 2 0 0 1
+39 Nesmith 2 1 1 0
+40 Langford 2 1 1 1
+41 Kornet 1 1 1 2
+42 Hernangomez 1 0 0 2
+43 Parker 2 1 0 0
+44 Stauskas 2 2 2 2 
+45 Fernando 2 2 1 1

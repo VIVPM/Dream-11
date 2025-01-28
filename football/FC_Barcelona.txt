@@ -1,0 +1,15 @@
+61 Stegen 2 2 1 1
+62 Kounde 1 1 1 1
+63 Araujo 1 0 0 2
+64 Balde 1 1 0 1
+65 Cancelo 2 0 0 1
+66 Jong 1 1 2 2
+67 Gavi 2 2 1 1
+68 Pedri 1 1 2 2
+69 Gundogan 1 1 1 1
+70 Lewandowski 1 1 2 2
+71 Yamal 1 2 2 2
+72 Raphinha 1 1 1 2
+73 Torres 1 0 0 0
+74 Christensen 2 0 0 2
+75 Romeu 2 0 0 0

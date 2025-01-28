@@ -1,0 +1,15 @@
+46 James 1 1 0 0
+47 Davis 2 1 1 0
+48 Westbrook 1 2 2 0
+49 Howard 2 1 1 0
+50 Anthony 1 2 2 2
+51 Monk 2 2 2 1
+52 Ellington 2 1 1 0
+53 Ariza 1 1 1 2
+54 Bazemore 1 2 0 3
+55 Reaves 2 3 0 1
+56 Nunn 1 1 1 1
+57 Tucker 1 2 0 0
+58 Jordan 2 0 0 0
+59 Rondo 1 2 0 0
+60 Augustin 2 2 1 1

@@ -1,0 +1,15 @@
+16 MS_Dhoni 1 60 10 4
+17 Ruturaj_Gaikwad 1 40 10 3
+18 Robin_Uthappa 1 30 10 1 
+19 Ambati_Rayudu 1 21 10 1
+20 Devon_Conway 1 47 10 2
+21 Subhranshu_Senapati 1 23 10 1	
+22 Hari_Nishaanth 1 14 10 1
+23 N_Jagadeesan 2 10 1 0
+24 Deepak_Chahar 2 10 3 0
+25 KM_Asif 2 10 1 0
+26 Tushar_Deshpande 2 10 6 0 
+27 Maheesh_Theekshana 2 10 2 1
+28 Simranjeet_Singh 2 10 7 0
+29 Matheesha_Pathirana 2 10 5 0
+30 Mukesh_Choudhary 2 01 9 1

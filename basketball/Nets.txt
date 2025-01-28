@@ -1,0 +1,15 @@
+61 Durant 1 0 0 0
+62 Harden 2 0 0 0
+63 Irving 1 2 2 1
+64 Harris 2 2 2 2 
+65 Mills 1 1 2 2
+66 Aldridge 2 3 2 1
+67 Griffin 2 2 0 0
+68 Brown 1 0 0 2
+69 Claxton 1 1 1 1
+70 Johnson 1 2 2 1
+71 Carter 1 3 2 1
+72 Bembry 1 0 0 2
+73 Thomas 1 0 0 1
+74 Sharpe 2 2 2 1 
+75 Duke 2 0 1 0

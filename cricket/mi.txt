@@ -1,0 +1,15 @@
+31 Rohit 1 500 10 50
+32 Ishan 1 300 10 30
+33 Surya 1 400 10 40
+34 Tilak 1 200 10 20
+35 Tim 1 150 10 15
+36 Cameron 1 250 10 25
+37 Nehal 1 100 10 10
+38 Jofra 2 10 20 5
+39 Bumrah 2 10 25 10
+40 Chawla 2 10 15 5
+41 Shokeen 2 10 10 2
+42 Green 1 10 10 1
+43 Meredith 2 10 10 1
+44 Behrendorff 2 10 10 0
+45 Kartikeya 2 10 10 0

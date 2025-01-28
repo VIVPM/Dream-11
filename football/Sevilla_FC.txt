@@ -1,0 +1,15 @@
+46 Dmitrovic 1 1 2 2
+47 Navas 1 0 0 2
+48 Bade 1 1 1 2
+49 Nianzou 1 1 2 2
+50 Acuna 2 2 1 1
+51 Rakitic 1 1 1 1
+52 Jordán 1 0 0 2
+53 Ocampos 1 0 0 2
+54 Lamela 1 0 0 1
+55 Nesyri 1 1 2 2
+56 Mir 2 2 2 2
+57 Torres 1 2 1 1
+58 Januzaj 2 2 1 1 
+59 Gudelj 1 1 1 2
+60 Gil 1 0 0 0 

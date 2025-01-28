@@ -1,0 +1,15 @@
+1 Antetokounmpo 2 1 1 1
+2 Middleton 1 2 2 2
+3 Holiday 1 2 1 0
+4 Lopez 1 1 1 2 
+5 Portis 1 2 2 2  
+6 Allen 2 1 1 1
+7 Connaughton 2 2 2 2
+8 Hill 1 1 1 1 
+9 Matthews 1 0 0 0
+10 Nwora 1 0 0 1
+11 DiVincenzo 2 0 0 2
+12 Ojeleye 2 2 0 1
+13 Tucker 2 2 2 1
+14 Ibaka 2 0 0 1
+15 Mamu 1 0 0 0

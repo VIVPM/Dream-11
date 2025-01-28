@@ -1,0 +1,30 @@
+1 Virat_Kohli 1 450 10 9
+2 Glenn_Maxwell 1 500 10 8
+3 Wanindu_Hasaranga 1 14 2 1 
+4 Harshal_Patel 2 23 2 0
+5 Josh_Hazlewood 2 10 3 0 
+6 Faf_Du_Plessis 1 88 10	3
+7 Mohammed_Siraj 2 10 1 0
+8 Dinesh_Karthik 1 12 10 3	
+9 Anuj_Rawat 1 10 10 2
+10 Shahbaz_Ahamad 2 10 2 1  
+11 Sherfane_Rutherford 1 10 10 1  
+12 Mahipal_Lomror 1 11 10 0
+13 Finn_llen 1 10 10 0
+14 Jason_Behrendorff 1 10 10 0
+15 Suyash_Prabhudessai 2 10 10 0
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

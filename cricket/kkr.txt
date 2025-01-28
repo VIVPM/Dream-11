@@ -1,0 +1,15 @@
+76 Shreyas 1 450 10 45
+77 Rana 1 350 10 35
+78 Rinku 1 320 10 32
+79 Narayan 1 150 10 15
+80 Gurbaz 1 180 0 18
+81 Umesh 2 10 25 5
+82 Ferguson 2 10 22 10
+83 Chakravarthy 2 10 18 8
+84 Suyash 2 10 12 6
+85 Russell 1 10 10 2
+86 Thakur 1 10 10 1
+87 Harshit 2 10 10 0
+88 Southee 2 10 10 0
+89 Roy 1 280 10 28
+90 Jagadeesan 1 200 10 20

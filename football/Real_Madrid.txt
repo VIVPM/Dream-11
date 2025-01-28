@@ -1,0 +1,15 @@
+76 Courtois 1 1 2 2
+77 Carvajal 2 2 1 1
+78 Rudiger 2 0 0 2
+79 Alaba 2 1 1 1 
+80 Mendy 1 1 2 2
+81 Camavinga 2 2 1 1
+82 Tchouameni 1 2 2 0
+83 Modric 2 0 0 2
+84 Bellingham 1 2 0 0
+85 Vinicius 1 1 0 0
+86 Rodrygo 1 2 2 1
+87 Joselu 1 2 2 2
+88 Diaz 2 1 1 1
+89 Garcia 1 2 2 0
+90 Fernandez 1 0 0 2

@@ -1,0 +1,15 @@
+76 Curry 1 0 0 2
+77 Thompson 2 1 0 0
+78 Green 2 2 2 1
+79 Wiggins 2 1 0 0
+80 Poole 2 2 1 1 
+81 Iguodala 1 1 2 2 
+82 Looney 1 1 0 2
+83 Lee 1 3 2 1
+84 Porter 2 2 2 2
+85 Bjelica 1 1 1 1
+86 Moody 2 2 1 0
+87 Kuminga 1 1 0 0
+88 Payton 1 2 1 3
+89 Wiseman 2 0 2 1
+90 Chriss 2 1 2 1

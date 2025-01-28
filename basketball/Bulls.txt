@@ -1,0 +1,15 @@
+16 LaVine 1 1 1 1
+17 DeRozan 2 2 2 2
+18 Vucevic 1 2 2 1
+19 Ball 1 1 1 2
+20 Caruso 2 2 1 1
+21 White 1 1 2 2
+22 Dosunmu 1 0 0 2
+23 Green 2 2 1 0
+24 Brown 1 1 0 0
+25 Jones 2 2 2 0
+26 Thompson 2 2 1 0
+27 Bradley 1 2 2 1
+28 Cook 1 2 3 1
+29 Dotson 2 2 2 0
+30 Simonovic 1 0 0 0

@@ -1,0 +1,15 @@
+61 Warner 1 520 10 52
+62 Shaw 1 300 10 30
+63 Marsh 1 400 10 40
+64 Pant 1 250 10 25
+65 Axar 1 150 10 15
+66 Nortje 2 10 22 8
+67 Kuldeep 2 10 20 10
+68 Khaleel 2 10 18 7
+69 Ishant 2 10 15 5
+70 Sakariya 2 10 10 2
+71 Lalit 2 10 10 1
+72 Powell 1 10 10 10
+73 Manish 1 180 0 18
+74 Prithvi 1 220 0 22
+75 Sarfaraz 1 200 0 20

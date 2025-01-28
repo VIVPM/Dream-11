@@ -1,0 +1,15 @@
+46 Dhawan 1 480 10 48
+47 Bairstow 1 350 10 35
+48 Rajapaksa 1 300 10 30
+49 Livingstone 1 400 10 40
+50 Jitesh 1 180 10 18
+51 Arshdeep 2 10 20 8
+52 Rabada 2 10 22 10
+53 Chahar 2 10 18 7
+54 Rishi 2 10 15 5
+55 Curran 2 10 10 3
+56 Harpreet 2 10 10 1
+57 Brar 2 10 10 0
+58 Prabhsimran 1 220 10 22
+59 Short 1 200 10 20
+60 Shahrukh 1 240 10 24
