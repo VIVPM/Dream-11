@@ -465,17 +465,6 @@ public:
             cout << pl->p_no << "\t" << pl->name << endl;
         }
     }
-
-// Destructor to free memory
-    /* ~team() {
-         for (auto &pl : p) {
-             delete pl;
-         }
-
-         for (auto &pl : footPlayer) {
-             delete pl;
-         }
-     }*/
 };
 
 
@@ -606,7 +595,7 @@ public:
                 }
                 else
                 {
-                    cout << "Invalid selection. Check type limits." << endl;
+                    cout << "Invalid selection. Check type limits." << endl << endl;
                     continue;
                 }
                 (*it)->selected = true;
@@ -614,12 +603,39 @@ public:
                 cout << "Basketball Player " << (*it)->name << " selected." << endl;
                 if (shooter_count < 3 || defenders_count < 3)
                     cout << "Select " << (3 - shooter_count) << " more shooters and "
-                         << (3 - defenders_count) << " more guardians from the pool." << endl;
+                         << (3 - defenders_count) << " more guardians from the pool." << endl << endl;
             }
             else
             {
-                cout << "Basketball Player not found or already selected." << endl;
+                cout << "Basketball Player not found or already selected." << endl << endl;
             }
+        }
+
+        cout << endl << "Selected Basketball Players List:" << endl;
+        int id1=-1,id2=-1;
+        for(int i = 0;i < selected_basketballPlayers.size();i++)
+        {
+             cout << selected_basketballPlayers[i]->name << " " << selected_basketballPlayers[i]->p_no << endl;
+        }
+
+        cout << endl << "Choose a captain and vice captain from selected basketball players by selecting player id:" << endl;
+        cin >> id1 >> id2;
+        for(int i = 0;i < selected_basketballPlayers.size();i++)
+        {
+             if(selected_basketballPlayers[i]->p_no == id1)
+             {
+                 selected_basketballPlayers[i]->captain = 1;
+             }
+
+             else if(selected_basketballPlayers[i]->p_no == id2)
+             {
+                 selected_basketballPlayers[i]->vice_captain = 1;
+             }
+
+             if(id1 != -1 && id2 != -1)
+             {
+                 break;
+             }
         }
     }
 
@@ -650,7 +666,7 @@ public:
                 }
                 else
                 {
-                    cout << "Invalid selection. Check type limits." << endl;
+                    cout << "Invalid selection. Check type limits." << endl << endl;
                     continue;
                 }
                 (*it)->selected = true;
@@ -658,12 +674,39 @@ public:
                 cout << "Cricket Player " << (*it)->name << " selected." << endl;
                 if (batsmen_count < 6 || bowlers_count < 5)
                     cout << "Select " << (6 - batsmen_count) << " more batsmen and "
-                         << (5 - bowlers_count) << " more bowlers from the pool." << endl;
+                         << (5 - bowlers_count) << " more bowlers from the pool." << endl << endl;
             }
             else
             {
-                cout << "Cricket Player not found or already selected." << endl;
+                cout << "Cricket Player not found or already selected." << endl << endl;
             }
+        }
+
+        cout << endl << "Selected Cricket Players List:" << endl;
+        int id1=-1,id2=-1;
+        for(int i = 0;i < selected_cricketPlayers.size();i++)
+        {
+             cout << selected_cricketPlayers[i]->name << " " << selected_cricketPlayers[i]->p_no << endl;
+        }
+
+        cout << endl << "Choose a captain and vice captain from selected cricket players by selecting player id:" << endl;
+        cin >> id1 >> id2;
+        for(int i = 0;i < selected_cricketPlayers.size();i++)
+        {
+             if(selected_cricketPlayers[i]->p_no == id1)
+             {
+                 selected_cricketPlayers[i]->captain = 1;
+             }
+
+             else if(selected_cricketPlayers[i]->p_no == id2)
+             {
+                 selected_cricketPlayers[i]->vice_captain = 1;
+             }
+
+             if(id1 != -1 && id2 != -1)
+             {
+                 break;
+             }
         }
     }
 
@@ -694,7 +737,7 @@ public:
                 }
                 else
                 {
-                    cout << "Invalid selection. Check type limits." << endl;
+                    cout << "Invalid selection. Check type limits." << endl << endl;
                     continue;
                 }
                 (*it)->selected = true;
@@ -702,13 +745,42 @@ public:
                 cout << "Football Player " << (*it)->name << " selected." << endl;
                 if (striker_count < 6 || defenders_count < 5)
                     cout << "Select " << (6 - striker_count) << " more strikers and "
-                         << (5 - defenders_count) << " more defenders from the pool." << endl;
+                         << (5 - defenders_count) << " more defenders from the pool." << endl <<endl;
             }
             else
             {
-                cout << "Football Player not found or already selected." << endl;
+                cout << "Football Player not found or already selected." << endl << endl;
             }
         }
+
+
+        cout << endl << "Selected Football Players List:" << endl;
+        int id1=-1,id2=-1;
+        for(int i = 0;i < selected_footballPlayers.size();i++)
+        {
+             cout << selected_footballPlayers[i]->name << " " << selected_footballPlayers[i]->p_no << endl;
+        }
+
+        cout << endl << "Choose a captain and vice captain from selected football players by selecting player id:" << endl;
+        cin >> id1 >> id2;
+        for(int i = 0;i < selected_footballPlayers.size();i++)
+        {
+             if(selected_footballPlayers[i]->p_no == id1)
+             {
+                 selected_footballPlayers[i]->captain = 1;
+             }
+
+             else if(selected_footballPlayers[i]->p_no == id2)
+             {
+                 selected_footballPlayers[i]->vice_captain = 1;
+             }
+
+             if(id1 != -1 && id2 != -1)
+             {
+                 break;
+             }
+        }
+
     }
 
     void calculateTeamPoints(int flag)
@@ -719,6 +791,10 @@ public:
             {
                 p->points=0;
                 p->Calculatepoints(); // Call derived class method
+                if(p->captain==1)
+                    p->points*=2;
+                else if(p->vice_captain==1)
+                    p->points*=1.5;
                 total_points += p->points;
             }
 
@@ -734,6 +810,10 @@ public:
             {
                 p->points=0;
                 p->Calculatepoints(); // Call derived class method
+                if(p->captain==1)
+                    p->points*=2;
+                else if(p->vice_captain==1)
+                    p->points*=1.5;
                 total_points += p->points;
             }
 
@@ -749,6 +829,10 @@ public:
             {
                 p->points=0;
                 p->Calculatepoints(); // Call derived class method
+                if(p->captain==1)
+                    p->points*=2;
+                else if(p->vice_captain==1)
+                    p->points*=1.5;
                 total_points += p->points;
             }
 
