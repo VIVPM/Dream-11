@@ -4,13 +4,15 @@
 
 <ul>
     <li>The user can choose any Sports league (Football League, Basketball League, IPL League).</li>
-    <li>The team is chosen based on the selection of players.</li>
-    <li>The user can choose the players from the given list based on batsman and bowler skills.</li>
+    <li>After choosing any league, the console displays the live match between two teams randomly from the choosen league.</li>
+    <li>The user creates a team from set of players belonging to both teams.</li>
+    <li>The user can choose the players from the given list os playersbased on player skills.</li>
     <li>The captain of the team is chosen and the points of the captain are doubled.</li>
     <li>The points of each player are calculated and the team's total points are calculated by summing the player’s points.</li>
     <li>The total points of each user are compared and the user with the maximum Total points is awarded as Winner.</li>
 </ul>
 
+<h2>Example of choosing IPL</h2>
 <table border="1">
   <tr>
     <th>Test case number</th>
